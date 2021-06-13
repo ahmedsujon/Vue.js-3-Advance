@@ -13,6 +13,8 @@
     </header>
     <div id="app">
         {{ msg }}
+        <h2>Welcome To {{ projectInfo.name }}</h2>
+        <h2>Check My Github Profile <a v-bind:href="projectInfo.github">Github</a></h2>
     </div>
     <script src="app.js"></script>
 </body>
