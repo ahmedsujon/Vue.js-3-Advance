@@ -9,12 +9,15 @@
 </head>
 <body>
     <header>
-        <h1 style="text-align: center;">Vue Js 3 Advance</h1>
+        <h1 style="text-align: center;">Vue Js 3 Advance {{ getCurrentTime() }}</h1>
     </header>
     <div id="app">
         {{ msg }}
-        <h2>Welcome To {{ projectInfo.name }}</h2>
-        <h2>Check My Github Profile <a v-bind:href="projectInfo.github">Github</a></h2>
+        <h2>Welcome To {{ projectInfo.name }} {{ getCurrentTime() }}</h2>
+        <h2>Check My Github Profile <a  :href="projectInfo.github">Github</a></h2>
+        <h2>Counter: {{ count }}</h2>
+        <button @click = "increase">Increment</button>
+        <button @click = "decrease">Decrement</button>
     </div>
     <script src="app.js"></script>
 </body>
