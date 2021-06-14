@@ -1,6 +1,8 @@
 var app = Vue.createApp ({
     data() {
         return{
+            num: "",
+            result: "",
             
             count: 0,
 
@@ -13,20 +15,23 @@ var app = Vue.createApp ({
     },
 
     methods: {
-        increase(){
-            this.count = this.count +1;
+        handleInput(e){
+            this.num = e.target.value;
+        },
+        getDouble(){
+            this.result = this.num * 2;
         },
 
-        decrease(){
-            this.count = this.count -1;
+        getSquar(){
+            this.result = this.num * this.num;
+        },
+        reset(){
+            this.num = "";
+            this.result = "";
         },
 
-        getCurrentTime() {
-            let ct = new Date();
-            return new Date();
-        }
     }
-    
+     
 });
 
 app.mount('#app');

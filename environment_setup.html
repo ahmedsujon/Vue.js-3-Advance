@@ -13,11 +13,16 @@
     </header>
     <div id="app">
         {{ msg }}
-        <h2>Welcome To {{ projectInfo.name }} {{ getCurrentTime() }}</h2>
-        <h2>Check My Github Profile <a  :href="projectInfo.github">Github</a></h2>
-        <h2>Counter: {{ count }}</h2>
-        <button @click = "increase">Increment</button>
-        <button @click = "decrease">Decrement</button>
+        <h3>Enter a number</h3>
+        <input v-model="num" type="text">
+        <br><br>
+        <button @click="getDouble">Get Double</button>
+        <button @click="getSquar">Get Square</button>
+        <button @click="reset">Reset</button>
+        <hr>
+        <label>Entered Number: {{num}}</label>
+        <br>
+        <label>Result:</label>{{result}}
     </div>
     <script src="app.js"></script>
 </body>
